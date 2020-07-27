@@ -13,6 +13,10 @@
 
 
     <main>
+      <?php if (isset($_GET['upstanza'])) { ?>
+        <p><?php echo 'stanza ' . $_GET['upstanza'] .' aggiornata con successo' ?></p>
+      <?php } ?>
+
       <table>
         <thead>
           <tr>
@@ -29,6 +33,8 @@
               <td><?php echo $stanza['room_number']; ?></td>
               <td><?php echo $stanza['floor']; ?></td>
               <td><a href="<?php echo $base_path . 'show/show.php?id=' .  $stanza['id']; ?>"> vedi</a> </td>
+              <td><a href="<?php echo $base_path . 'upgrade/edit.php?id=' .  $stanza['id']; ?>"> modifica</a> </td>
+              <td><a href="<?php echo $base_path . 'delete/cancella.php?id=' .  $stanza['id']; ?>"> cancella</a> </td>
             </tr>
           <?php } ?>
         </tbody>
