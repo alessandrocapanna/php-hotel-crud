@@ -21,6 +21,12 @@
         <p><?php echo 'stanza ' . $_GET['dlstanza'] .' cancellata con successo' ?></p>
       <?php } ?>
 
+      <?php if (isset($_GET['instanza'])) { ?>
+        <p><?php echo 'stanza ' . $_GET['instanza'] .' creata con successo' ?></p>
+      <?php } ?>
+
+      <a href="<?php echo $base_path . 'insert/insert.php'; ?>" id="crea"> CREA</a>
+
       <table>
         <thead>
           <tr>
