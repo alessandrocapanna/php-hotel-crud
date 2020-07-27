@@ -9,7 +9,7 @@ $sql = "UPDATE `stanze` SET `room_number` = $room_number, `floor` = $floor,`beds
 $result = $conn->query($sql);
 
 if ($result) {
-  header('Location:' .  $base_path . '?upstanza=' . $room_number);
+  header('Location:' .  $base_path . '?upstanza=' . $id);
 }else {
   die('non è avvetuta con successo');
 }

@@ -6,15 +6,10 @@
   $sql = "DELETE  FROM `stanze` WHERE `id`= $room_id ";
   $result = $conn->query($sql);
 
-
   if ($result) {
-    $stanza = $result->fetch_assoc();
-  } elseif ($result) {
-    //  ci sono 0 risultati ma funziona la query
-    $stanza = [];
-  } else {
-   // non funge query
-   die('query error');
+    header('Location:' .  $base_path . '?dlstanza=' . $room_id);
+  }else {
+    die('non è avvetuta con successo');
   }
 
   $conn->close();

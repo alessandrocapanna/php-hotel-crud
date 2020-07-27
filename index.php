@@ -17,6 +17,10 @@
         <p><?php echo 'stanza ' . $_GET['upstanza'] .' aggiornata con successo' ?></p>
       <?php } ?>
 
+      <?php if (isset($_GET['dlstanza'])) { ?>
+        <p><?php echo 'stanza ' . $_GET['dlstanza'] .' cancellata con successo' ?></p>
+      <?php } ?>
+
       <table>
         <thead>
           <tr>
