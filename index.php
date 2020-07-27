@@ -1,4 +1,4 @@
-<?php include __DIR__ .'/database.php' ?>
+<?php include __DIR__ .'/server.php' ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -28,6 +28,7 @@
               <td><?php echo $stanza['id']; ?></td>
               <td><?php echo $stanza['room_number']; ?></td>
               <td><?php echo $stanza['floor']; ?></td>
+              <td><a href="<?php echo $base_path . 'show/show.php?id=' .  $stanza['id']; ?>"> vedi</a> </td>
             </tr>
           <?php } ?>
         </tbody>

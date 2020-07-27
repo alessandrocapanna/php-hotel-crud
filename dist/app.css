@@ -7,5 +7,18 @@
 header {
   background-color: blue;
   color: white;
+  padding: 20px;
+}
+
+table {
+  margin: 15px;
+}
+
+table * {
+  padding: 5px;
+}
+
+table tbody * {
+  border: 1px solid black;
 }
 
